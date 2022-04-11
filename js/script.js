@@ -7,6 +7,10 @@ Project 4 - Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community
 
+
+
+let quotes = [''];
+
 /*** 
  * `quotes` array 
 ***/
