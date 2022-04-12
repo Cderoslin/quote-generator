@@ -46,18 +46,19 @@ Project 4 - Random Quote Generator
   
   ];
   
-  function getRandomQuote(quotes) {
-    let randomNumQuote = Math.floor( Math.random() * quotes.length ) + 1;
-    console.log(getRandomQuote());
+  function getRandomQuote(array) {
+    let randomNumQuote = Math.floor( Math.random() * array.length );
+    return array[randomNumQuote];
   };
   
+  console.log(getRandomQuote(quotes));
 
 // for (let i = 1; i <= 10; i++){
    
 // }
 
 /*** 
- * `quotes` array 
+ * `` array 
 ***/
 
 
