@@ -67,13 +67,24 @@ function getRandomQuote(array) {
   return array[randomNumQuote];
 };
 
-console.log(getRandomQuote(quotes[quote]));
+console.log(getRandomQuote(quotes));
 
 /***
  * `printQuote` function
 ***/
 
-
+let finalRandomQuote ='';
+let html = '';
+function printQuote (){
+    finalRandomQuote = getRandomQuote(quotes);
+    let html = `
+    <p class="quote"> ${finalRandomQuote} </p>
+    <p class="source"> quote source
+      <span class="citation"> quote citation </span>
+      <span class="year"> quote year </span>
+    </p>
+    `
+};
 
 /***
  * click event listener for the print quote button
