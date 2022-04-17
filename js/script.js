@@ -77,8 +77,8 @@ let html = '';
 function printQuote (){
     finalRandomQuote = getRandomQuote(quotes);
     let html = `
-    <p class="quote"> ${finalRandomQuote} </p>
-    <p class="source"> quote source
+    <p class="quote"> ${finalRandomQuote.quote} </p>
+    <p class="source"> ${finalRandomQuote.source}
       <span class="citation"> quote citation </span>
       <span class="year"> quote year </span>
     </p>
