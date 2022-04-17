@@ -76,6 +76,7 @@ let finalRandomQuote ='';
 let html = '';
 function printQuote (){
     finalRandomQuote = getRandomQuote(quotes);
+    console.log(finalRandomQuote.quote, finalRandomQuote.source)
     let html = `
     <p class="quote"> ${finalRandomQuote.quote} </p>
     <p class="source"> ${finalRandomQuote.source}
