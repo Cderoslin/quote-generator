@@ -61,7 +61,6 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
-let
 function getRandomQuote(array) {
   let randomNumQuote = Math.floor( Math.random() * array.length );
   return array[randomNumQuote];
