@@ -9,16 +9,10 @@ Project 4 - Random Quote Generator
 
   
 
-  
-  
-  
 
-// for (let i = 1; i <= 10; i++){
-   
-// }
 
 /*** 
- * `` array 
+ quotes array of objects for the generator app 
 ***/
 
 let quotes = [
@@ -59,32 +53,45 @@ let quotes = [
 ];
 
 /***
- * `getRandomQuote` function
+ this function uses the the array's index to return a random quote from quotes array of objects.
 ***/
-function getRandomQuote(array) {
+getRandomQuote = (array) => {
   let randomNumQuote = Math.floor( Math.random() * array.length );
   return array[randomNumQuote];
 };
 
-console.log(getRandomQuote(quotes));
-
 /***
- * `printQuote` function
+ the printQuote function calls the getRandomQuote function and stores that in a variable
+that variable is used in the string that is added to the paragraph element in the html file.
+Along with conditonals to concatenate citation and year to be displayed in the browser also.
 ***/
 
 let finalRandomQuote ='';
-let html = '';
-function printQuote (){
+
+let htmlStr = '';
+
+ printQuote = () => {
+
     finalRandomQuote = getRandomQuote(quotes);
-    console.log(finalRandomQuote.quote, finalRandomQuote.source)
-    let html = `
+    htmlStr = `
     <p class="quote"> ${finalRandomQuote.quote} </p>
     <p class="source"> ${finalRandomQuote.source}
-      <span class="citation"> quote citation </span>
-      <span class="year"> quote year </span>
-    </p>
     `
+
+    if (finalRandomQuote.citation) {
+      htmlStr += `<span class="citation">${finalRandomQuote.citation}</span>`;
+    }
+  
+    if (finalRandomQuote.year) {
+      htmlStr += `<span class="year">${finalRandomQuote.year}</span>`;
+    }
+
+    htmlStr += `</p>`;
+
+    document.getElementById('quote-box').innerHTML = htmlStr;
 };
+printQuote()
+
 
 /***
  * click event listener for the print quote button
