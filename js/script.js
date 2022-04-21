@@ -12,7 +12,7 @@ Project 4 - Random Quote Generator
 
 
 /*** 
-quotes array of objects for the generator app 
+This is the quotes variable with an array of objects for the generator app 
 ***/
 
 let quotes = [
