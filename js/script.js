@@ -12,7 +12,7 @@ Project 4 - Random Quote Generator
 
 
 /*** 
- quotes array of objects for the generator app 
+quotes array of objects for the generator app 
 ***/
 
 let quotes = [
@@ -53,7 +53,7 @@ let quotes = [
 ];
 
 /***
- this function uses the the array's index to return a random quote from quotes array of objects.
+This function uses the the array's index to return a random quote from quotes array of objects.
 ***/
 getRandomQuote = (array) => {
   let randomNumQuote = Math.floor( Math.random() * array.length );
@@ -61,9 +61,9 @@ getRandomQuote = (array) => {
 };
 
 /***
- the printQuote function calls the getRandomQuote function and stores that in a variable
+The printQuote function calls the getRandomQuote function and stores that in a variable
 that variable is used in the string that is added to the paragraph element in the html file.
-Along with conditonals to concatenate citation and year to be displayed in the browser also.
+Along with conditionals to concatenate citation and year to be displayed in the browser also.
 ***/
 
 let finalRandomQuote ='';
