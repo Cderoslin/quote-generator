@@ -12,7 +12,7 @@ Project 4 - Random Quote Generator
 
 
 /*** 
-This is the quotes variable with an array of objects for the generator app 
+This is the quotes variable with an array of objects that will be generated. 
 ***/
 
 let quotes = [
@@ -29,6 +29,7 @@ let quotes = [
     source: "- Winston Churchill"
   },
   {
+    tag: "humor",
     quote:"Life is like a box of chocolates. You never know what you’re going to get.",
     source: "- Forrest Gump",
     year: 1994,
@@ -52,6 +53,8 @@ let quotes = [
 
 ];
 
+let randomCol = ["#D8AED3", "#A1E3D8","#B9F8D3","#E78EA9","#92BA92","#5584AC","#FFA8A8","#F1E1A6","#4D77FF","#712B75","#E15FED"];
+
 /***
 This function uses the the array's index to return a random quote from quotes array of objects.
 ***/
@@ -59,19 +62,26 @@ getRandomQuote = (array) => {
   let randomNumQuote = Math.floor( Math.random() * array.length );
   return array[randomNumQuote];
 };
+``
+getRandomColor = (array) => {
+  let randomColor = Math.floor( Math.random() * array.length );
+  return array[randomColor];
+};
+
 
 /***
 The printQuote function calls the getRandomQuote function and stores that in a variable
 that variable is used in the string that is added to the paragraph element in the html file.
 Along with conditionals to concatenate citation and year to be displayed in the browser also.
 ***/
-
+// const main = document.querySelector('main');
+// main.innerHTML = `<h1>The merger is "${finalMerge}".<h1>`;
 let finalRandomQuote ='';
-
+let finalRanCol = '';
 let htmlStr = '';
 
  printQuote = () => {
-
+    finalRanCol = getRandomColor(randomCol);
     finalRandomQuote = getRandomQuote(quotes);
     htmlStr = `
     <p class="quote"> ${finalRandomQuote.quote} </p>
@@ -86,11 +96,18 @@ let htmlStr = '';
       htmlStr += `<span class="year">${finalRandomQuote.year}</span>`;
     }
 
+    if (finalRandomQuote.tag) {
+      htmlStr += `<p class="tag">${finalRandomQuote.tag}</p>`;
+    }
+
     htmlStr += `</p>`;
 
     document.getElementById('quote-box').innerHTML = htmlStr;
+    document.body.style.backgroundColor = finalRanCol;
 };
 printQuote()
+
+setInterval(printQuote, 10000);
 
 
 /***
