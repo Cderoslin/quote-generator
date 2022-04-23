@@ -74,8 +74,7 @@ The printQuote function calls the getRandomQuote function and stores that in a v
 that variable is used in the string that is added to the paragraph element in the html file.
 Along with conditionals to concatenate citation and year to be displayed in the browser also.
 ***/
-// const main = document.querySelector('main');
-// main.innerHTML = `<h1>The merger is "${finalMerge}".<h1>`;
+
 let finalRandomQuote ='';
 let finalRanCol = '';
 let htmlStr = '';
