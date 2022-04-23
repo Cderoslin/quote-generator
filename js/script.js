@@ -62,7 +62,7 @@ getRandomQuote = (array) => {
   let randomNumQuote = Math.floor( Math.random() * array.length );
   return array[randomNumQuote];
 };
-``
+
 getRandomColor = (array) => {
   let randomColor = Math.floor( Math.random() * array.length );
   return array[randomColor];
