@@ -18,36 +18,36 @@ This is the quotes variable with an array of objects that will be generated.
 let quotes = [
   {
     quote:"The journey of a thousand miles begins with one step.",
-    source: "- Lao Tzu"
+    source: "Lao Tzu"
   },
   {
     quote:"You must be the change you wish to see in the world.",
-    source: "- Mahatma Gandhi"
+    source: "Mahatma Gandhi"
   },
   {
     quote:"If you’re going through hell, keep going.",
-    source: "- Winston Churchill"
+    source: "Winston Churchill"
   },
   {
     tag: "humor",
     quote:"Life is like a box of chocolates. You never know what you’re going to get.",
-    source: "- Forrest Gump",
+    source: "Forrest Gump",
     year: 1994,
     citation: "Forrest Gump"
   },
   {
     quote:"It always seems impossible until it’s done.",
-    source: "- Nelson Mandela",
+    source: "Nelson Mandela",
     year: 2001
   },
   {
     quote:"It is never too late to be what you might have been.",
-    source: "- George Eliot",
+    source: "George Eliot",
     year: 1881
   },
   {
     quote:"Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.",
-    source: "- Bil Keane",
+    source: "Bil Keane",
     year: 1994
   },
 
