@@ -53,15 +53,6 @@ let quotes = [
 
 ];
 
-let randomCol = [
-  "#D8AED3","#A1E3D8","#E78EA9","#92BA92",
-  "#5584AC","#FFA8A8","#FBF46D","#712B75",
-  "#E15FED","#B8B5FF","#40394A","#333F44",
-  "#57D131","#8F1537","#4E1E1E","#AEDEFC",
-  "#373331","#F3F798","#304D4E","#B9E937",
-  "#FF6363"
-];
-
 /***
 This function uses the the array's index to return a random quote from quotes array of objects.
 ***/
@@ -70,11 +61,10 @@ getRandomQuote = (array) => {
   return array[randomNumQuote];
 };
 
-getRandomColor = (array) => {
-  let randomColor = Math.floor( Math.random() * array.length );
-  return array[randomColor];
+getRandomColor = () => {
+  let randomColor = 'rgb('+Math.round(Math.random()*188)+','+Math.round(Math.random()*188)+','+Math.round(Math.random()*188)+')';
+     return randomColor;
 };
-
 
 /***
 The printQuote function calls the getRandomQuote function and stores that in a variable
@@ -87,7 +77,7 @@ let finalRanCol = '';
 let htmlStr = '';
 
  printQuote = () => {
-    finalRanCol = getRandomColor(randomCol);
+    finalRanCol = getRandomColor();
     finalRandomQuote = getRandomQuote(quotes);
     htmlStr = `
     <p class="quote"> ${finalRandomQuote.quote} </p>
