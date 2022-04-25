@@ -62,7 +62,7 @@ getRandomQuote = (array) => {
 };
 
 getRandomColor = () => {
-  let randomColor = 'rgb('+Math.round(Math.random()*188)+','+Math.round(Math.random()*188)+','+Math.round(Math.random()*188)+')';
+  let randomColor = 'rgb('+Math.round(Math.random()*188)+','+Math.round(Math.random()*188)+','+Math.round(Math.random()*188)+','+.8+')';
      return randomColor;
 };
 
